@@ -34,6 +34,15 @@ for folder in "$@"; do
         fi
     else
         echo "Folder not found: $folder"
+
+        if [ -f "$folder.sh" ]; then
+            echo "Running $folder.sh"
+            if ! bash "$folder.sh"; then
+                echo "Error: $folder.sh failed. Stopping execution."
+                exit 1
+            fi
+            echo -e "${GREEN}$folder setup complete${NC}"
+        fi
     fi
 done
 
