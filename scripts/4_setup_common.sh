@@ -1,5 +1,5 @@
 #!/bin/bash
 
-folders=("tmux" "fzf" "zoxide")
+tools=("tmux" "fzf" "zoxide")
 
-bash "$(dirname "$0")/setup_folders.sh" "${folders[@]}"
+bash "$(dirname "$0")/setup_tools.sh" "${tools[@]}"
