@@ -15,6 +15,9 @@ echo "Current directory: $(pwd)"
 # Go to the ../configs folder
 cd ../configs
 
+GREEN='\033[0;32m'
+NC='\033[0m'
+
 # Loop through each folder provided as an argument
 for folder in "$@"; do
     if [ -d "$folder" ]; then
@@ -25,6 +28,7 @@ for folder in "$@"; do
                 echo "Error: setup.sh in $folder failed. Stopping execution."
                 exit 1
             fi
+            echo -e "${GREEN}$folder setup complete${NC}"
         else
             echo "No setup.sh found in $folder"
         fi
