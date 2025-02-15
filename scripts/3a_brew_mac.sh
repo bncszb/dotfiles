@@ -1,5 +1,6 @@
 brew install rectangle
 
+brew install lazygit
 brew install kubectl
 brew install k3d
 brew install k9s

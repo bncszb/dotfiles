@@ -1,6 +1,7 @@
 
 alias ls='ls --color'
 alias c='clear'
+alias lg='lazygit'
 
 # History
 HISTSIZE=5000
