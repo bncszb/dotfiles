@@ -1,7 +1,9 @@
 
+alias sz='source ~/.zshrc'
 alias ls='ls --color'
 alias c='clear'
 alias lg='lazygit'
+alias v='cd /Users/${USER}/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Vault'
 
 # History
 HISTSIZE=5000
@@ -18,5 +20,3 @@ setopt hist_find_no_dups
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
-
-alias v='cd /Users/${USER}/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Vault'
