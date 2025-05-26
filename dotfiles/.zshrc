@@ -18,3 +18,5 @@ setopt hist_find_no_dups
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
+
+alias v='cd /Users/${USER}/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Vault'
