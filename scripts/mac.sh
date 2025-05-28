@@ -1,7 +1,10 @@
-brew install rectangle
-brew install visual-studio-code
-brew install google-chrome
-brew install vlc
+brew install --cask rectangle
+brew install --cask visual-studio-code
+brew install --cask obsidian
+brew install --cask google-chrome
+brew install --cask messenger
+brew install --cask discord
+brew install --cask vlc
 
 brew install --cask iterm2
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.config/iterm2/custom_settings"
