@@ -24,3 +24,14 @@ eval "$(zoxide init zsh)"
 # if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
 eval "$(oh-my-posh init zsh)"
 # fi
+
+# bun completions
+[ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# aider
+export AIDER_AUTO_COMMITS=false
+
