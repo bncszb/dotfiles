@@ -6,6 +6,8 @@ alias lg='lazygit'
 alias v='cd /Users/${USER}/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Vault'
 alias ic='cd /Users/${USER}/Library/Mobile\ Documents/com~apple~CloudDocs'
 
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # History
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
@@ -53,3 +55,4 @@ bindkey "\e[1;3D" backward-word     # ⌥←
 bindkey "\e[1;3C" forward-word      # ⌥→
 bindkey "^[[1;9D" beginning-of-line # cmd+←
 bindkey "^[[1;9C" end-of-line       # cmd+→word
+export PATH="/usr/local/opt/curl/bin:$PATH"

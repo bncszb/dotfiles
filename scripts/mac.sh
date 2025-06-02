@@ -5,6 +5,8 @@ brew install --cask google-chrome
 brew install --cask messenger
 brew install --cask discord
 brew install --cask vlc
+brew install --cask docker
+brew install git-delta
 
 brew install --cask iterm2
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.config/iterm2/custom_settings"

@@ -57,6 +57,11 @@ os:
   editPreset: vscode
 
 customCommands:
+  - key: '<c-v>'
+    command: 'code .'
+    description: 'Open repo in VS Code'
+    context: 'global'
+    loadingText: 'Opening VS Code...'
   - key: "p"
     context: "global"
     description: "Pull Options"
