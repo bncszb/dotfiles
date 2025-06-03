@@ -6,6 +6,7 @@ brew install --cask messenger
 brew install --cask discord
 brew install --cask vlc
 brew install --cask docker
+brew install --cask zotero
 brew install git-delta
 
 brew install --cask iterm2
