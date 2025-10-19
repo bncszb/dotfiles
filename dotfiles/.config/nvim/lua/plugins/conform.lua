@@ -1,0 +1,15 @@
+return {
+  "stevearc/conform.nvim",
+  opts = {
+    formatters_by_ft = {
+      python = function(bufnr)
+        local conform = require("conform")
+        if conform.get_formatter_info("ruff_format", bufnr).available then
+          return { { "ruff_fix" }, { "ruff_format" } }
+        else
+          return { "black" }
+        end
+      end,
+    },
+  },
+}
