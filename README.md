@@ -4,5 +4,5 @@
 
 `bash link.sh`
 
-Check if the folder is linked porperly!
+Check if the folder is linked properly!
 If it already exists it might create it inside `.config`
