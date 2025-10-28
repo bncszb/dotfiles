@@ -5,6 +5,7 @@ alias c='clear'
 alias lg='lazygit'
 alias v='cd /Users/${USER}/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Vault'
 alias ic='cd /Users/${USER}/Library/Mobile\ Documents/com~apple~CloudDocs'
+alias unv='uv run nvim'
 
 export XDG_CONFIG_HOME="$HOME/.config"
 
