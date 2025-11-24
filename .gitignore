@@ -3,3 +3,5 @@
 dotfiles/.config/gcloud
 dotfiles/.config/configstore/update-notifier-@docusaurus
 dotfiles/.config/github-copilot
+dotfiles/.config/firebase
+dotfiles/.config/configstore
