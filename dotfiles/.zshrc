@@ -27,7 +27,7 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 
 # if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/gruvbox.omp.json)"
+# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/gruvbox.omp.json)"
 # fi
 
 # bun completions
@@ -41,7 +41,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export AIDER_AUTO_COMMITS=false
 
 function gpw() {
-  a=$(openssl rand -base64 40 | tr -d '/+=Oo0lI' | cut -c1-25)  
+  a=$(openssl rand -base64 40 | tr -d '/+=Oo0lI' | cut -c1-25)
   echo "$a"
   echo -n "$a" | pbcopy
 }
@@ -59,4 +59,8 @@ bindkey "^[[1;9D" beginning-of-line # cmd+←
 bindkey "^[[1;9C" end-of-line       # cmd+→word
 export PATH="/usr/local/opt/curl/bin:$PATH"
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/benceszabo/.lmstudio/bin"
+# End of LM Studio CLI section

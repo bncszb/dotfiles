@@ -7,6 +7,33 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "format_on_save": "on",
+  "git_panel": {
+    "tree_view": true,
+  },
+  "context_servers": {
+    "next-devtools": {
+      "enabled": true,
+      "remote": false,
+      "command": "npx",
+      "args": ["-y", "next-devtools-mcp@latest"],
+    },
+    "heroui-react": {
+      "enabled": true,
+      "remote": false,
+      "command": "npx",
+      "args": ["-y", "@heroui/react-mcp@latest"],
+    },
+    "some-remote-server": {
+      "enabled": true,
+      "url": "https://example.com/mcp",
+    },
+  },
+  "debugger": {
+    "dock": "left",
+  },
+  "preferred_line_length": 140,
+  "soft_wrap": "bounded",
   "current_line_highlight": "gutter",
   "buffer_font_weight": 350.0,
   "buffer_font_family": "JetBrains Mono",
@@ -16,6 +43,45 @@
   },
   "colorize_brackets": true,
   "agent": {
+    "default_profile": "write",
+    "tool_permissions": {
+      "tools": {
+        "terminal": {
+          "always_allow": [
+            {
+              "pattern": "^cat\\b",
+            },
+            {
+              "pattern": "^ls\\b",
+            },
+            {
+              "pattern": "^rm\\s+restructure\\.py(\\s|$)",
+            },
+          ],
+        },
+        "mcp:next-devtools:init": {
+          "default": "allow",
+        },
+        "mcp:heroui-react:get_component_docs": {
+          "default": "allow",
+        },
+        "mcp:heroui-react:list_components": {
+          "default": "allow",
+        },
+        "mcp:next-devtools:browser_eval": {
+          "default": "allow",
+        },
+        "mcp:next-devtools:nextjs_call": {
+          "default": "allow",
+        },
+      },
+    },
+    "default_model": {
+      "effort": "high",
+      "provider": "google",
+      "model": "gemini-3.1-pro-preview",
+      "enable_thinking": true,
+    },
     "dock": "right",
     "sidebar_side": "right",
     "favorite_models": [],
@@ -28,7 +94,7 @@
   "icon_theme": {
     "mode": "dark",
     "light": "Zed (Default)",
-    "dark": "Zed (Default)",
+    "dark": "Catppuccin Frappé",
   },
 
   "agent_servers": {
@@ -55,9 +121,11 @@
     "dark": "Ayu Mirage",
   },
   "project_panel": {
+    "hide_hidden": false,
     "dock": "left",
   },
 
+  "max_tabs": 10,
   "languages": {
     "Python": {
       "language_servers": ["ty", "!basedpyright", "ruff"],
@@ -70,18 +138,67 @@
         },
       },
     },
+    "TypeScript": {
+      "language_servers": ["vtsls", "biome"],
+      "formatter": {
+        "language_server": {
+          "name": "biome",
+        },
+      },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true,
+      },
+    },
+    "TSX": {
+      "language_servers": ["vtsls", "biome"],
+      "formatter": {
+        "language_server": {
+          "name": "biome",
+        },
+      },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true,
+      },
+    },
+    "JavaScript": {
+      "language_servers": ["vtsls", "biome"],
+      "formatter": {
+        "language_server": {
+          "name": "biome",
+        },
+      },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true,
+      },
+    },
+    "Svelte": {
+      "language_servers": ["svelte-language-server", "!biome"],
+    },
+    "Rust": {
+      "language_servers": ["rust-analyzer"],
+    },
   },
   "lsp": {
     "ruff": {
       "binary": {
-        "path": ".venv/bin/ruff",
+        // "path": ".venv/bin/ruff",
         "arguments": ["server"],
       },
     },
     "ty": {
       "binary": {
-        "path": ".venv/bin/ty",
+        // "path": ".venv/bin/ty",
         "arguments": ["server"],
+      },
+    },
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "clippy",
+        },
       },
     },
   },

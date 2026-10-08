@@ -10,3 +10,6 @@ dotfiles/.config/prisma-cli
 dotfiles/.config/nordvpn
 dotfiles/.config/Epson/FastFoto
 dotfiles/.config/docmost-cli
+/dotfiles/.config/earthengine
+/dotfiles/.config/zed/prompts/prompts-library-db.0.mdb
+/dotfiles/.config/zed/prompts/prompts-library-db.0.mdb
